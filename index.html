@@ -7,11 +7,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>WhatsOnTap.in</title>
 
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Lora:400,700|Pattaya" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Pattaya" rel="stylesheet">
     <style>
         html,
         body {
-            font-family: 'Lora', serif;
+            font-family: 'Source Sans Pro', sans-serif;
             font-style: normal;
             font-weight: 400;
             font-size: 95%;
@@ -25,106 +25,82 @@
         }
 
         body {
-            padding: 20px;
+            padding: 0;
             height: 100%;
             width: 100%;
+            background: #f6f6f6;
         }
 
-        h1 {
-            font-size: 3.998rem;
-            font-family: 'Source+Sans+Pro', sans-serif;
-            margin: 0 0 20px;
+        .logo {
+            font-size: 1.5rem;
+            margin: 0;
             color: rgb(100, 85, 111);
-        }
-
-        h1 .cityAnchor {
-            color: hsl(348, 3%, 24%);
-            font-size: 2.47rem;
-            text-decoration: none;
-        }
-        h1 .cityAnchor:hover {
-            color: rgb(100, 85, 111);
-        }
-
-        h1.logo {
+            display: inline-block;
             font-family: 'Pattaya', cursive;
-            margin: 2.47rem 0;
-            text-align: center;
+            vertical-align: middle;
+            height: 32px;
+            line-height: 32px;
         }
-
-        ul {
-            margin: 0 0 1.618rem;
-            padding: 0 0 0 1.618rem;
-        }
-
-        .p1 {
-            color: hsl(348, 3%, 44%);
-        }
-        .p2 {
-            color: hsl(348, 3%, 64%);
-        }
-
-        strong {
+        .city {
+            font-size: 1rem;
             font-family: 'Source+Sans+Pro', sans-serif;
+            margin: 0;
+            display: inline-block;
+            font-family: 'Source+Sans+Pro', sans-serif;
+            vertical-align: middle;
+            height: 32px;
+            line-height: 32px;
+        }
+        .headerDivider {
+            font-size: 1rem;
+            margin: 0 3px 0 4px;
+            height: 32px;
+            line-height: 32px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .mainHeader {
+            background: #fff;
+            padding: 20px 20px 16px;
+        }
+
+        .tile {
+            display: inline-block;
+            width: 340px;
+            height: 100px;
+            box-shadow: 2px 2px 8px #888;
+            margin: 20px;
+            padding: 10px;
+            vertical-align: top;
+        }
+        .tile + .tile {
+            margin-left: 0px;
+        }
+        .tile h4 {
+            margin: 0;
         }
     </style>
 </head>
 <body>
-<div style="width: 560px; margin: auto;">
-    <h1 class="logo">
-        WhatsOnTap.in
-        <a class="cityAnchor"href="javascript:void" title="Your city goes here!">/bengaluru</a>
-    </h1>
-    <p>
-        <strong>What is it?</strong><br />
-        <em>A portal that shows you WhatsOnTap around you. Want a quick pint before
-        heading back home from work? Where is the best IPA in town? Where is the closest Irish Red
-        Ale I can get? When was Toit Tintin last tapped? What is the word on the new Mango Pale Ale
-        at Arbor Brewing Co.?</em>
-    </p>
-    <p>
-        Wouldn't it be nice to have all of this this? Well, its probably very difficult but I've
-        felt the need for something like this for a while. I'm working on the website for it first
-        since that is my professional expertise. The logistics of getting the content is something
-        I haven't thought about yet.<br />
-        If you're interested in this, feel free to drop me a line at whatsup[a t]whatsontap.in.
-    </p>
-
-    <h2>Features</h2>
-
-    <div>The darker it is, the higher priority it is.</div>
-    <div class="p2">The lighter it is, the lower priority it is.</div>
-    <h3>Brewery List</h3>
-    <ul>
-        <li>
-            <strong>Beers on tap</strong>
-            <ul>
-                <li>Beer details (description, type, IBU, ABV, price)</li>
-                <li class="p1">Expert reviews</li>
-                <li class="p1">User reviews</li>
-            </ul>
-        </li>
-        <li class="p1">
-            <strong>Beers coming up</strong>
-            <ul>
-                <li>Beer details</li>
-            </ul>
-        </li>
-        <li class="p2">
-            <strong>Brewers login</strong><br />
-            So brewers can login themselves and update all the values. Initially, there will
-            be no incentive for the brewers to login and add the info themselves, so we'd
-            have to do it ourselves. So this gets bumped down in priority.
-        </li>
-    </ul>
-
-    <H3>Bottled beers</H3>
-    <ul>
-        <li>Where to find them (which wine shops stock them)</li>
-        <li>Expert reviews</li>
-        <li>User reviews</li>
-        <li class="p2">Wine shop login (low priority, low incentive)</li>
-    </ul>
-</div>
+    <header class="mainHeader">
+        <h1 class="logo">WhatsOnTap.in</h1><div class="headerDivider">/</div><h2 class="city">bangalore</h2>
+    </header>
+    <div>
+        <div class="tile">
+            <h4>Toit</h4>
+            4 stars
+            6 beers
+            11.3 kms
+            <div class="punchline">Best belgian wit in town</div>
+        </div>
+        <div class="tile">
+            <h4>Arbor Brewing Company</h4>
+            4.5 stars
+            9 beers
+            <div class="punchline">The famous raging elephant IPA.</div>
+        </div>
+    </div>
+    API Key: AIzaSyD3ux5wIOhJ93Sm6FN1yo0VApexwsdTWA4
+    https://maps.googleapis.com/maps/api/distancematrix/json?departure_time=now&mode=driving&units=metric&origins=Arbor%20brewing%20company,bangalore&destinations=nutanix%20bangalore&key=AIzaSyD3ux5wIOhJ93Sm6FN1yo0VApexwsdTWA4
 </body>
 </html>
