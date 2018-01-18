@@ -14,7 +14,7 @@
             font-family: 'Source Sans Pro', sans-serif;
             font-style: normal;
             font-weight: 400;
-            font-size: 95%;
+            font-size: 90%;
             padding: 0;
             margin: 0;
             color: hsl(348, 3%, 24%);
@@ -66,18 +66,33 @@
 
         .tile {
             display: inline-block;
-            width: 340px;
-            height: 100px;
+            width: 260px;
+            height: 120px;
             box-shadow: 2px 2px 8px #888;
             margin: 20px;
             padding: 10px;
             vertical-align: top;
+            background: #fcfcfc;
+            font-size: 1rem;
         }
         .tile + .tile {
             margin-left: 0px;
         }
         .tile h4 {
             margin: 0;
+            font-size: 1.2rem;
+        }
+
+        .stats {
+            font-size: 0.8rem;
+            margin-bottom: 6px;
+        }
+
+        .stats div {
+            display: inline-block;
+        }
+        .stats div + div {
+            margin-left: 4px;
         }
     </style>
 </head>
@@ -88,19 +103,28 @@
     <div>
         <div class="tile">
             <h4>Toit</h4>
-            4 stars
-            6 beers
-            11.3 kms
-            <div class="punchline">Best belgian wit in town</div>
+            <div class="stats">
+                <div><b>4</b> stars</div>
+                <div><b>6</b> beers</div>
+                <div><b>11.3</b> kms (<b>53</b> mins)</div>
+            </div>
+            <div class="one-liner">Known for its belgian wit and nitro stout. Also the iconic roof, after which it is named.</div>
         </div>
         <div class="tile">
             <h4>Arbor Brewing Company</h4>
-            4.5 stars
-            9 beers
-            <div class="punchline">The famous raging elephant IPA.</div>
+            <div class="stats">
+                <div><b>4.5</b> stars</div>
+                <div><b>9</b> beers</div>
+                <div><b>7</b> kms (<b>20</b> mins)</div>
+            </div>
+            <div class="one-liner">Brewery #1! Always has a few kick as IPAs on tap. Not to mention some pretty great experimental beers!</div>
         </div>
     </div>
-    API Key: AIzaSyD3ux5wIOhJ93Sm6FN1yo0VApexwsdTWA4
+    <small>
+        <pre>
+    API Key: AIzaSyD3ux5wIOhJ93Sm6FN1yo0VApexwsdTWA4<br />
     https://maps.googleapis.com/maps/api/distancematrix/json?departure_time=now&mode=driving&units=metric&origins=Arbor%20brewing%20company,bangalore&destinations=nutanix%20bangalore&key=AIzaSyD3ux5wIOhJ93Sm6FN1yo0VApexwsdTWA4
+        </pre>
+    </small>
 </body>
 </html>
